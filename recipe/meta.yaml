@@ -1,8 +1,8 @@
 {% set name = "markovify" %}
-{% set version = "0.6.0" %}
-{% set compress_type = "tar.gz" %}
+{% set version = "0.6.1" %}
+{% set bundle = "tar.gz" %}
 {% set hash_type = "sha256" %}
-{% set hash = "36e78e12b620e1f6e8c9cd89c844e1926554f5dbeabf8fe1ecbd6fc2d15cf38b" %}
+{% set hash = "11c19c297b5bd24f2dd994a28e6ee45dec5c00bc48a01ec2c70f25d06a7698c0" %}
 {% set build = 0 %}
 
 package:
@@ -10,8 +10,8 @@ package:
   version: {{ version }}
 
 source:
-  fn: {{ name }}-{{ version }}.{{ compress_type }}
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.{{ compress_type }}
+  fn: {{ name }}-{{ version }}.{{ bundle }}
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.{{ bundle }}
   {{ hash_type }}: {{ hash }}
 
 build:
