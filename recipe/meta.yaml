@@ -1,8 +1,8 @@
 {% set name = "markovify" %}
-{% set version = "0.6.4" %}
+{% set version = "0.7.1" %}
 {% set bundle = "tar.gz" %}
 {% set hash_type = "sha256" %}
-{% set hash = "e59c4b21086b4ce1c67b308a3b78628199febb7f7bc49f4c964828cf58457df6" %}
+{% set hash = "f016ef58f60a8afb925aa16803538561c4b00375bf0b7f84952c29993805b9a7" %}
 {% set build = 0 %}
 
 package:
