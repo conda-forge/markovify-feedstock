@@ -5,11 +5,13 @@ Home: https://github.com/jsvine/markovify
 
 Package license: MIT
 
-Feedstock license: BSD 3-Clause
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/markovify-feedstock/blob/master/LICENSE.txt)
 
 Summary: A simple, extensible Markov chain generator. Uses include generating random semi-plausible sentences based on an existing text.
 
+Development: https://github.com/jsvine/markovify
 
+Documentation: https://github.com/jsvine/markovify
 
 Current build status
 ====================
