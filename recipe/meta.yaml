@@ -1,26 +1,22 @@
 {% set name = "markovify" %}
-{% set version = "0.8.0" %}
-{% set bundle = "tar.gz" %}
-{% set hash_type = "sha256" %}
-{% set hash = "c533a2e1aba8148bb98031b7159e8bf1a276c61db53d2e882ecb74fa5603a4f4" %}
-{% set build = 1 %}
+{% set version = "0.9.0" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  fn: {{ name }}-{{ version }}.{{ bundle }}
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.{{ bundle }}
-  {{ hash_type }}: {{ hash }}
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: 6bed379c6143741d6f7344f8d88526b0387ede23cf798f1e5ab99f525d6dba4d
 
 build:
   noarch: python
-  number: {{ build }}
-  script: python setup.py install --single-version-externally-managed --record=record.txt
+  number: 0
+  script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
-  build:
+  host:
+    - pip
     - python >=3.6
     - setuptools
 
@@ -31,6 +27,10 @@ requirements:
 test:
   imports:
     - markovify
+  commands:
+    - pip check
+  requires: 
+    - pip
 
 about:
   home: https://github.com/jsvine/markovify
