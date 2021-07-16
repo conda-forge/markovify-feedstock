@@ -1,5 +1,5 @@
 {% set name = "markovify" %}
-{% set version = "0.9.0" %}
+{% set version = "0.9.3" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 6bed379c6143741d6f7344f8d88526b0387ede23cf798f1e5ab99f525d6dba4d
+  sha256: e31c6fcdf4ed12c8e00e39df735ffa0d5546f7515ff4c32e4e0ae23c41f9cba9
 
 build:
   noarch: python
@@ -29,7 +29,7 @@ test:
     - markovify
   commands:
     - pip check
-  requires: 
+  requires:
     - pip
 
 about:
@@ -38,7 +38,7 @@ about:
   license_file: {{ RECIPE_DIR }}/LICENSE.txt
   license: MIT
   license_family: MIT
-  summary: 'A simple, extensible Markov chain generator. Uses include generating random semi-plausible sentences based on an existing text.'
+  summary: A simple, extensible Markov chain generator. Uses include generating random semi-plausible sentences based on an existing text.
   dev_url: https://github.com/jsvine/markovify
   doc_url: https://github.com/jsvine/markovify
 
