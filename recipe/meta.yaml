@@ -1,5 +1,5 @@
 {% set name = "markovify" %}
-{% set version = "0.9.3" %}
+{% set version = "0.9.4" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: e31c6fcdf4ed12c8e00e39df735ffa0d5546f7515ff4c32e4e0ae23c41f9cba9
+  sha256: eac0a156ed54bb6bede32ef20131813fbec9db70b515ead57b4d8887a16dfe39
 
 build:
   noarch: python
