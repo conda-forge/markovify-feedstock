@@ -1,0 +1,48 @@
+schema_version: 1
+
+context:
+  name: markovify
+  version: "0.9.4"
+
+package:
+  name: ${{ name|lower }}
+  version: ${{ version }}
+
+source:
+  url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/${{ name }}-${{ version }}.tar.gz
+  sha256: eac0a156ed54bb6bede32ef20131813fbec9db70b515ead57b4d8887a16dfe39
+
+build:
+  number: 3
+  noarch: python
+  script: ${{ PYTHON }} -m pip install . -vv
+
+requirements:
+  host:
+    - pip
+    - python ${{ python_min }}.*
+    - setuptools
+  run:
+    - python >=${{ python_min }}
+    - unidecode
+
+tests:
+  - python:
+      imports:
+        - markovify
+      pip_check: true
+      python_version: ${{ python_min }}
+
+about:
+  # Non MANIFEST - see https://github.com/jsvine/markovify/pull/65
+  license_file: LICENSE.txt
+  license: MIT
+  summary: A simple, extensible Markov chain generator. Uses include generating random semi-plausible sentences based on an existing text.
+  homepage: https://github.com/jsvine/markovify
+  repository: https://github.com/jsvine/markovify
+  documentation: https://github.com/jsvine/markovify
+
+extra:
+  recipe-maintainers:
+    - pmlandwehr
+    - jan-janssen
